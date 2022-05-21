@@ -1,0 +1,363 @@
+.grid-container{
+    display: grid;
+    grid-template-areas: "cont-gene-menu" "cont-filtro" "cont-gen-productos" "paginacion" "cont-footer";
+    grid-template-rows: 50px 70px 3fr 50px;
+}
+
+.cont-gene-menu{
+    grid-area: cont-gene-menu;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    background-color: #1e88e5;
+}
+
+.titulo-page{
+    display: flex;
+    display: inline-block;
+    flex-direction: row;
+    margin: 0 0 0 20px;
+}
+
+.icon-hamb{
+    margin: 0 20px 0 0;
+}
+
+.cont-menu{
+    display: none;
+}
+
+.cont-filtro{
+    grid-area: cont-filtro;
+    background-color: #e0e0e0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 10px 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+}
+
+.cont-filtro p{
+    margin: 5px 0 5px 0;
+}
+
+.filtro{
+    width: 40%;
+    height: 50%;
+    border-radius: 1vh;
+}
+.cont-gen-productos{
+    display: grid;
+    grid-area: cont-gen-productos;
+    margin: 10px 10px 10px 10px ;
+}
+
+.cont-card-product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border: gainsboro solid 1px;
+    border-radius: 1vh;
+    width: 100%;
+}
+
+.cont-card-product-dn-c{
+    display: none;
+}
+
+.cont-card-product-dn-t{
+    display: none;
+}
+
+.cont-img{
+    width: 100%;
+}
+
+.for-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.form-texto{
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+}
+
+.button{
+    display: block;
+    width: 30%;
+    background-color: #1e88e5 ;
+    color: white;
+    border: none;
+    border-radius: 1vh;
+    margin-block-end: 10px;
+}
+
+.formato-boton{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    text-align: center;
+    padding: 7px 0px 0px 0px;
+}
+
+.paginacion{
+    grid-area: paginacion;
+}
+
+.cont-iconos{
+    align-items: center;
+}
+.cont-footer{
+    grid-area: cont-footer;
+    background-color: #1565c0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+}
+
+@media(min-width: 577px) and (max-width: 991px){
+    .grid-container{
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 12vh; 
+        grid-template-areas:
+        "cont-gene-menu cont-gene-menu"
+        "cont-filtro cont-gen-productos"
+        "cont-filtro paginacion"
+        "cont-footer cont-footer";
+        height: 100%;
+    }
+
+    .cont-gene-menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .titulo-page{
+        display: flex;
+        width: 50%;
+        align-items: center;
+
+    }
+    .icon-hamb{
+        display: none;
+    }
+
+    .cont-menu{
+        display: inline;
+        flex-direction: row;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 10px 0 0;
+    }
+
+    .menu{
+        list-style-type: none;
+        text-align: center
+    }
+
+    .menu li{
+        display: inline;
+        padding: 0 6px;
+        justify-content: flex-end;
+    }
+
+    .filtro{
+        width: 70%;
+        height: 10%;
+    }
+
+    .cont-gen-productos{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 2vh;
+        margin-top: 2vh;
+        margin-block-end: 2vh;
+    }
+
+    .cont-card-product-dn-c{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        border: gainsboro solid 1px;
+        border-radius: 1vh;
+    }
+    
+    .cont-img{
+        width: 12rem;
+        height: 9rem;
+        
+    }
+
+    .cont-img-dn-c{
+        width: 12rem;
+        height: 9rem;
+    }
+    
+    .for-img-dn{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .form-texto{
+        font-size: medium;
+    }
+    .button{
+        width: 50%;
+    }
+    
+    .paginacion{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+}
+
+@media(min-width: 992px){
+    .grid-container{
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: auto; 
+        grid-template-areas:
+        "cont-gene-menu cont-filtro"
+        "cont-gene-menu cont-gen-productos"
+        "cont-gene-menu cont-gen-productos"
+        "cont-gene-menu paginacion"
+        "cont-footer paginacion";
+    }
+
+    .cont-gene-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        /* height: 100%; para barra de nav */
+    }
+
+    .titulo-page{
+        display: flex;
+        align-items: center;
+        margin: 20% 20% 10% 20%;
+        flex-direction: row;
+
+    }
+    .icon-hamb{
+        display: none;
+    }
+
+    .cont-menu{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+ 
+        margin: 0 20% 0 20%;
+    }
+
+    .menu{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .cont-filtro p{
+        margin: 5px 0 5px 0;
+    }
+
+    .filtro{
+        width: 90%;
+        height: 50%;
+    }
+
+    .cont-gen-productos{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 2vh;
+        margin-top: 2vh;
+        margin-block-end: 2vh;
+        /* height: 33vh; para barra de nav */
+    }
+     
+    .cont-card-product-dn-c{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:flex-start;
+        border: gainsboro solid 1px;
+        border-radius: 1vh;
+    }
+
+    .cont-card-product-dn-t{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        border: gainsboro solid 1px;
+        border-radius: 1vh;
+    }
+
+    .cont-img{
+        width: 11rem;
+        height: 7rem;
+    }
+
+    .cont-img-dn-c{
+        width: 11rem;
+        height: 7rem;
+    }
+
+    .cont-img-dn-t{
+        width: 11rem;
+        height: 7rem;
+    }
+    
+    .for-img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    } 
+
+    .for-img-dn-c{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    } 
+
+    .for-img-dn-t{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    } 
+    
+    .form-texto{
+        font-size: medium;
+    }
+    .button{
+        width: 50%;
+    }
+    
+    .paginacion{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .cont-footer{
+        font-size: medium;
+    }
+}
